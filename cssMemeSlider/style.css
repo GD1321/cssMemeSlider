@@ -22,7 +22,6 @@ a {
     height: 100vh;
     background-color: white;
     overflow: hidden;
-
 }
 
 .switcher input {
@@ -52,9 +51,13 @@ a {
     background-color: white;
 }
 
-.controls label:checked {
-    background-color: rgb(236, 175, 196);
-    border: 2.5px solid;
-    border-color: rgb(236, 175, 196);
+.switcher 
+    input:nth-child(1):checked ~ .controls label:nth-child(1),
+    input:nth-child(2):checked ~ .controls label:nth-child(2),
+    input:nth-child(3):checked ~ .controls label:nth-child(3),
+    input:nth-child(4):checked ~ .controls label:nth-child(4),
+    input:nth-child(5):checked ~ .controls label:nth-child(5) {
+        background-color: rgb(236, 175, 196);
+        border: 2.5px solid;
+        border-color: rgb(236, 175, 196);
 }
-
