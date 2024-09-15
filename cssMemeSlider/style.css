@@ -9,16 +9,15 @@ html {
     transition: all 0.3s;
     border: 0; 
     margin: 0; 
-    padding: 0;
+    padding: 1rem;
 }
   
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: white;
     overflow: hidden;
@@ -30,15 +29,15 @@ a {
 
 .controls {
     display: flex;
-    gap: 1rem;
+    gap: 5px;
     position: absolute;
-    bottom: -5rem;
-    left: 50%;
+    bottom: -rem;
+    left: 70%;
 }
 
 .controls label {
-    width: 2rem;
-    height: 2rem;
+    width: 40%;
+    height: 40%;
     background-color: black;
     border-radius: 50%;
     border: 2.5px solid;
@@ -60,4 +59,51 @@ a {
         background-color: rgb(236, 175, 196);
         border: 2.5px solid;
         border-color: rgb(236, 175, 196);
+}
+
+.slides {
+    position: relative;
+    width: 500vw;
+    height: 100vh;
+    display: flex;
+}
+
+.slide {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 0.5rem;
+}
+
+.slide__image {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.switcher 
+    input:nth-child(1):checked ~ .slides {
+        left: 0;
+}
+
+.switcher 
+    input:nth-child(2):checked ~ .slides {
+        left: -100vw;
+}
+
+.switcher 
+    input:nth-child(3):checked ~ .slides {
+        left: -200vw;
+}
+
+.switcher 
+    input:nth-child(4):checked ~ .slides {
+        left: -300vw;
+}
+
+.switcher 
+    input:nth-child(5):checked ~ .slides {
+        left: -400vw;
 }
